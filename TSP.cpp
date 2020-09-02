@@ -9,6 +9,12 @@ TSP::TSP(string path) {
         stream >> this->number_of_populations;
         stream >> this->mutation_propability;
         stream >> this->number_of_cities;
+        cout << "------------------------------------" << endl;
+        cout << "PARAMETERS : " << endl;
+        cout << "Number of populations: " << this->number_of_populations << endl;
+        cout << "Mutation propability: " << this->mutation_propability << endl;
+        cout << "Number of cities: " << this->number_of_cities << endl;
+        cout << "------------------------------------" << endl;
         this->paths = new vector<int>[this->number_of_populations];
         this->values = new double[this->number_of_populations];
         for(int i = 0; i < this->number_of_populations; i++) this->values[i] = 0;
@@ -24,10 +30,6 @@ TSP::TSP(string path) {
         cout << "ERROR";
     }
     stream.close();
-    for(auto& p: this->coordinates) {
-        cout << p.first << " " << p.second.first << " " << p.second.second;
-        cout << endl;
-    }
 }
 
 void TSP::init() {
