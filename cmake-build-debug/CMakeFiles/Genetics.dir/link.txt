@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Genetics.dir/main.cpp.o CMakeFiles/Genetics.dir/TSP.cpp.o  -o Genetics 
