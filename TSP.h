@@ -28,7 +28,7 @@ private:
     double* values;
     vector<int>* paths;
     int number_of_cities;
-    int number_of_populations;
+    int population_size;
     int mutation_propability;
     unordered_map<int, pair<int,int>> coordinates;
 };
