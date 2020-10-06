@@ -5,4 +5,6 @@ int main() {
     tsp.display_population();
     tsp.target_function();
     tsp.display_evaluations();
+    tsp.select_parents_second();
+    tsp.display_parents();
 }

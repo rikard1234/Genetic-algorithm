@@ -24,7 +24,11 @@ public:
     void display_population();
     void display_evaluations();
     void target_function();
+    void select_parents_first();
+    void select_parents_second();
+    void display_parents();
 private:
+    vector<pair<int,int>> parents;
     double* values;
     vector<int>* paths;
     int number_of_cities;
