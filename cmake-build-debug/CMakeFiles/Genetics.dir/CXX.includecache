@@ -11,6 +11,18 @@ TSP.h
 /home/jakub/projects/Genetics/TSP.h
 math.h
 -
+queue
+-
+random
+-
+iomanip
+-
+algorithm
+-
+set
+-
+unordered_set
+-
 
 /home/jakub/projects/Genetics/TSP.h
 random
@@ -32,5 +44,7 @@ fstream
 utility
 -
 algorithm
+-
+set
 -
 

@@ -15,8 +15,17 @@
 #include <fstream>
 #include <utility>
 #include <algorithm>
+#include <set>
 using namespace std;
-
+struct myComp {
+    constexpr bool operator()(
+        pair<int, double> const& a,
+        pair<int, double> const& b)
+        const noexcept
+    {
+        return a.second < b.second;
+    }
+};
 class TSP {
 public:
     TSP(string);
@@ -24,16 +33,24 @@ public:
     void display_population();
     void display_evaluations();
     void target_function();
-    void select_parents_first();
-    void select_parents_second();
+    void select_and_cross();
     void display_parents();
+    void crossing();
+    void final_step();
+    void start();
+    void selecting_parents_1();
+    void selecting_parents_2();
+    vector<pair<int, long double>> sorting();
+    vector<pair<long double,int>> sorting_unique();
 private:
     vector<pair<int,int>> parents;
-    double* values;
-    vector<int>* paths;
+    long double* values;
+    double* buffor_values;
+    vector<vector<int>> paths;
     int number_of_cities;
     int population_size;
     int mutation_propability;
+    int h1, h2;
     unordered_map<int, pair<int,int>> coordinates;
 };
 
